@@ -1,0 +1,51 @@
+version: "2.0"
+
+nlu:
+- intent: greeting
+  examples: |
+    - hey
+    - hello
+    - hi
+    - heya
+
+- intent: how_are_you
+  examples: |
+    - how are you
+    - how is it going
+    - how is life
+
+- intent: bye
+  examples: |
+   - bye
+   - good bye
+
+- intent: get_weather
+  examples: |
+    - what's the weather
+    - what's the weather in [Czech Republic](GPE)
+    - what is the weather
+    - what is the weather in [New Zealand](GPE)
+    - whats the weather
+
+- synonym: Prague
+  examples: |
+    - Czech Republic
+    - Czechia
+    - CR
+    - CZ
+
+- synonym: Auckland
+  examples: |
+    - New Zealand
+    - NZ
+    - Zealand
+
+- intent: my_name_is
+  examples: |
+   - I am [Martin](PERSON)
+   - I am [Jack](PERSON)
+   - I'm [Steven](PERSON)
+   - im [Jack](PERSON)
+   - My name is [Martin Novak](PERSON)
+   - This is [Dipankar](PERSON) here
+   - [John](PERSON)

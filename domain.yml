@@ -1,0 +1,45 @@
+version: "2.0"
+
+slots:  # slots which are used for passing data to your actions. 
+  PERSON: #We use the name PERSON because that is how Spacy names the entity.
+    type: text
+  GPE:
+    type: text
+
+entities:
+  - PERSON
+
+intents: # intents identified by NLU based on your nlu-data.md
+  - greeting
+  - how_are_you
+  - bye
+  - my_name_is
+  - get_weather
+
+actions: # actions define the responses of your bot. 
+  - utter_greeting # Simple text response names start with utter_.
+  - utter_how_i_am
+  - utter_bye
+  - utter_its_nice_to_meet_you
+  - action_weather
+
+  # utter_its_nice_to_meet_you uses 
+  # PERSON slot in the response to personalize it.
+
+responses:  # templates define the actual text responses used by the dialogue engine.
+  utter_greeting: # The engine will pick one random response out of all the options
+    - text: "Hi! Could you please help me with your name?"
+    - text: "Hello, my friend. What can I call you?"
+  utter_how_i_am:
+    - text: "I am doing ok."
+    - text: "I am good."
+  utter_bye:
+    - text: "Bye."
+    - text: "Good bye."
+  utter_its_nice_to_meet_you:
+    - text: "It's nice to meet you, {PERSON}."
+    - text: "Nice to meet you, {PERSON}."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

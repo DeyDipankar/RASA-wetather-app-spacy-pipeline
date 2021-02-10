@@ -1,0 +1,28 @@
+version: "2.0"
+
+stories:
+
+- story: greeting path
+  steps:
+    - intent: greeting
+    - action: utter_greeting
+
+- story: how_are_you path
+  steps:
+    - intent: how_are_you
+    - action: utter_how_i_am 
+
+- story: bye path
+  steps:
+    - intent: bye
+    - action: utter_bye 
+
+- story: my_name_is path
+  steps:
+    - intent: my_name_is
+    - action: utter_its_nice_to_meet_you
+
+- story: weather path
+  steps:
+    - intent: get_weather
+    - action: action_weather
