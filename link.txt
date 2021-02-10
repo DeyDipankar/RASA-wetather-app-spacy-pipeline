@@ -1,3 +1,5 @@
 https://medium.com/coinmonks/rasa-python-weather-chatbot-51fc218d346d
 
 https://github.com/JustinaPetr/Weatherbot_Tutorial/tree/master/Full_Code_Latest
+
+https://yamlchecker.com/
